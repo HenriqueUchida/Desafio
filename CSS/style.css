@@ -1,0 +1,44 @@
+header{
+    text-align: center;
+    background-color: rgb(47, 255, 99);
+    color: white;
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+
+th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    background-color: #98ec909d;
+}
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.fase{
+    text-align: center;
+    font-size: 35px;
+}
+/* Inicia o contador */
+.tabela {
+    counter-reset: linha; /* Reinicia o contador ao começar a tabela */
+}
+
+/* Estilo para as células que vão mostrar os números */
+.tabela td.numero {
+    counter-increment: linha; /* Incrementa o contador a cada célula */
+    text-align: center; /* Alinha o número ao centro */
+    font-weight: bold;
+}
+
+/* Adiciona o número nas células */
+.tabela td.numero::before {
+    content: counter(linha); /* Insere o número na célula */
+}
