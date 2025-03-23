@@ -1,6 +1,6 @@
 header{
     text-align: center;
-    background-color: rgb(47, 255, 99);
+    background-color: rgb(66, 207, 101);
     color: white;
 }
 table {
@@ -12,8 +12,10 @@ table {
 th {
     border: 1px solid black;
     padding: 10px;
-    text-align: left;
+    text-align: center;
     background-color: #98ec909d;
+    
+
 }
 td {
     border: 1px solid black;
