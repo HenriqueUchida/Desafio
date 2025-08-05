@@ -11,581 +11,136 @@
     <header>
         <h1>Copa do Mundo FIFA de 2022</h1>
     </header>
-    <h2 id="fase">Fase de grupos</h2>
-    <h2>Grupo A</h2>
-</body>
-    <div class="tabela">
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
+    <main>
+        <h2 id="titulo">Fase de grupos</h2>
+        <section id="grupo-a" class="grupo">
+            <h2>Grupo A</h2>
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CLASSIFICAÇÃO</th>
+                            <th>P</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>GP</th>
+                            <th>GC</th>
+                            <th>SG</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Hoanda</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        </tr>
+                        <tr>
+                        <td>Senegal</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        </tr>
+                        <tr>
+                        <td>Equador</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        </tr>
+                        <tr>
+                        <td>Catar</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <TR>
-                <td class="numero"></td>
-                <TD>Holanda</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Senegal</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Equador</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Catar</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-        </table>
-    </div>
-    <div class="tabela">
-        <h2>Grupo B</h2>
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
+            <div id="jogos-a" class="jogos">
+                <div class="cabecalho-jogos">
+                    <button id="btn-anterior" aria-label="Rodada anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <h3>1º RODADA</h3>
+                    <button id="btn-proximo" aria-label="Próxima rodada">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                <section class="linha-de-cima">
+                    <div class="mandante">
+                        <span>Catar</span>
+                    </div>
+                    <div class="placar">
+                        <div class="gols-mandante">
+                            <span>2</span>
+                        </div>
+                        <span>x</span>
+                        <div class="gols-visitante">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="visitante">
+                        <span>Equador</span>
+                    </div>
+                </section>
+                <section class="linha-de-baixo">
+                    <div class="mandante">
+                        <span>Senegal</span>
+                    </div>
+                    <div class="placar">
+                        <div class="gols-mandante">
+                            <span>0</span>
+                        </div>
+                        <span>x</span>
+                        <div class="gols-visitante">
+                            <span>2</span>
+                        </div>
+                    </div>
+                    <div class="visitante">
+                        <span>Holanda</span>
+                    </div>
+                </section>
             </div>
-            <TR>
-                <td class="numero"></td>
-                <TD>Inglaterra</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Estados Unidos</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Irã</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>País de Gales</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-        </table>
-    </div>
-    <div class="tabela">
-        <h2>Grupo C</h2>
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
-            </div>
-            <TR><td class="numero"></td>
-                <TD>Argentina</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Polonia</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>México</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Arábia Saudita</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-        </table>
-    </div>
-    <div class="tabela">
-        <h2>Grupo D</h2>
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
-            </div>
-            <TR>
-                <td class="numero"></td>
-                <TD>França</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Austrália</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Tunísia</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Dinamarca</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-        </table>
-    </div>
-    <div class="tabela">
-        <h2>Grupo E</h2>
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
-            </div>
-        <TR>
-            <td class="numero"></td>
-            <TD>Japão</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <tD>0</tD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-        </TR>
-        <TR>
-            <td class="numero"></td>
-            <TD>Espanha</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <tD>0</tD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-        </TR>
-        <TR>
-            <td class="numero"></td>
-            <TD>Alemanha</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <tD>0</tD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-        </TR>
-        <TR>
-            <td class="numero"></td>
-            <TD>Costa Rica</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <tD>0</tD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-            <TD>0</TD>
-        </TR>
-    </table>
-    </div>
-    <div class="tabela">
-        <h2>Grupo F</h2>
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
-            </div>
-            <TR>
-                <td class="numero"></td>
-                <TD>Marrocos</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Croácia</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Bélgica</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Canadá</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-        </table>
-    </div>
-    <div class="tabela">
-        <h2>Grupo G</h2>
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
-            </div>
-            <TR>
-                <td class="numero"></td>
-                <TD>Brasil</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Suíça</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Camarões</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Sérvia</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-        </table>
-    </div>
-    <div class="tabela">
-        <h2>Grupo H</h2>
-        <table>
-            <div class="cabecalho">
-                <tr>
-                    <th>#</th>
-                    <TH>CLASSIFICACAO</TH>
-                    <TH>P</TH>
-                    <TH>J</Th>
-                    <TH>V</Th>
-                    <TH>E</Th>
-                    <tH>D</th>
-                    <TH>GP</Th>
-                    <TH>GC</Th>
-                    <TH>SG</Th>
-                    <TH>%</Th>
-                </tr>
-            </div>
-            <TR>
-                <td class="numero"></td>
-                <TD>Portugal</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Coreia do Sul</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Uruguai</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-            <TR>
-                <td class="numero"></td>
-                <TD>Gana</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <tD>0</tD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-                <TD>0</TD>
-            </TR>
-        </table>
-    </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script/script.js"></script>
+</body>    
 </html>
