@@ -3,13 +3,63 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
-    font-family: var(--fontPrincipal);
+    box-sizing: border-box; /*essa propriedade é para o padding usar a largura do div, 
+    se por exemplo a div tiver 100px e for adicionado um padding de 10px, a a div continuará tendo 100px mas sem essa propriedade
+    a div ficaria com 120px pois seria adicionado 10px para cada lado da div*/
+    font-family: var(--fontePrincipal);
     font-size: normal;
 }
 
  :root{
-    --fontPrincipal: 'Open Sans', Arial, sans-serif;
+    --fontePrincipal: 'Open Sans', Arial, sans-serif;
+    --corFundo: #06AA48;
 } 
 
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
+header {
+    text-align: center;
+    background-color: var(--corFundo);
+    padding: 25px;
+}
+
+header > h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+div.alinhar-elementos {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+
+div.cabecalho-jogos {
+    display: flex;
+    flex-direction: row;
+
+}
+
+section.jogos-grupo {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+section.jogos-grupo > div {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
