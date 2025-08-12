@@ -7,10 +7,9 @@
     se por exemplo a div tiver 100px e for adicionado um padding de 10px, a a div continuará tendo 100px mas sem essa propriedade
     a div ficaria com 120px pois seria adicionado 10px para cada lado da div*/
     font-family: var(--fontePrincipal);
-    font-size: normal;
 }
 
- :root{
+:root{
     --fontePrincipal: 'Open Sans', Arial, sans-serif;
     --corFundo: #06AA48;
 } 
@@ -19,6 +18,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+body > main {
+    margin: auto;
 }
 
 header {
@@ -37,29 +40,160 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+    width: 1000px;
+}
+
+td {
+    font-weight: light;
 }
 
 div.alinhar-elementos {
     display: flex;
     flex-direction: row;
     gap: 3rem;
+    font-size: 1.4rem;
 }
 
 
 div.cabecalho-jogos {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
 
 }
 
+.cabecalho-jogos > h3 {
+    font-size: 1.3rem;
+    margin: auto;
+}
+
+section.grupo {
+    width: 100%;
+}
+
 section.jogos-grupo {
-    display: flex;
-    flex-direction: row;
-    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+
+#btn-anterior, #btn-proximo {
+  cursor: pointer; /* Mãozinha quando o botão está ATIVO */
+  transition: background-color 0.2s; /* Efeito suave na cor de fundo */
+}
+
+/* Efeito extra quando o mouse passa por cima de um botão ATIVO */
+#btn-anterior:hover, #btn-proximo:hover {
+  background-color: #f0f0f0; /* Exemplo: muda levemente a cor de fundo */
+}
+
+/* Estilo para os botões quando estiverem DESABILITADOS */
+#btn-anterior:disabled, #btn-proximo:disabled {
+  opacity: 0.4;
+  cursor: not-allowed; /* Cursor de "proibido" */
+}
+
+.mandante {
+    text-align: right;
+}
+
+/* Alinha o texto do time visitante à esquerda */
+.visitante {
+    text-align: left;
+}
+
+/* Garante que o placar tenha uma fonte destacada */
+.placar > .gols {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
 }
 
 section.jogos-grupo > div {
     display: flex;
     flex-direction: row;
-    margin: auto;
+    
+}
+
+
+.tabela {
+    width: 100%; /* Ocupa toda a largura do container pai */
+    border-collapse: collapse; /* Remove o espaçamento entre as bordas */
+    background-color: #2c2c34;
+    color: #ffffff;
+    font-size: 0.9em; /* Tamanho de fonte base */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que o conteúdo respeite o border-radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+
+/* =========================== */
+/* === CABEÇALHO DA TABELA === */
+/* =========================== */
+
+.tabela thead tr {
+    background-color: #1e1e24;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    letter-spacing: 0.5px; /* Leve espaçamento entre as letras */
+}
+
+.tabela th {
+    padding: 14px 10px;
+    color: #c5c5c5;
+    font-size: 0.8em;
+}
+
+
+/* ======================== */
+/* === CORPO DA TABELA === */
+/* ======================== */
+
+.tabela td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #4a4a52;
+    text-align: center; /* Centraliza os dados numéricos */
+}
+
+/* Alinha o nome da equipe à esquerda para melhor leitura */
+.tabela td:first-child {
+    text-align: left;
+    font-weight: bold;
+    /* Adiciona uma barra colorida para indicar classificação */
+    border-left: 4px solid transparent; 
+}
+
+/* Zebra-striping: alterna a cor de fundo das linhas para facilitar a leitura */
+.tabela tbody tr:nth-of-type(even) {
+    background-color: #35353e;
+}
+
+/* Efeito de hover: destaca a linha quando o mouse está sobre ela */
+.tabela tbody tr:hover {
+    background-color: #4f4f5a;
+    cursor: pointer;
+}
+
+/* Remove a borda inferior da última linha */
+.tabela tbody tr:last-of-type td {
+    border-bottom: none;
+}
+
+
+/* ============================ */
+/* === DESTAQUE ESPECIAL === */
+/* ============================ */
+
+/* Adiciona a barra verde nas duas primeiras equipes (posição de classificação) */
+.tabela tbody tr:nth-child(1) td:first-child,
+.tabela tbody tr:nth-child(2) td:first-child {
+    border-left: 4px solid #00b16a; /* Cor verde para classificados */
 }
