@@ -108,6 +108,16 @@ section.jogos-grupo {
     text-align: left;
 }
 
+.placar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.divisor-placar {
+    opacity: 0.4;
+}
 /* Garante que o placar tenha uma fonte destacada */
 .placar > .gols {
     font-size: 1.2em;
