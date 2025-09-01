@@ -6,15 +6,12 @@ rodadaAnterior.addEventListener('click', voltar());
 rodadaProxima.addEventListener('click', avancar());
 let rodadaInicial = 1;
 const totalRodadas = 3;
-
+rodadaAnterior.disabled = true;
 
 
 function voltar() {
-    botaoVoltar.disabled = true;
     if (conteudoRodada != '1ª RODADA') {
-        botaoVoltar.disabled = false;
-        identificadorRodada.innerHTML = ''
-
+        rodadaAnterior.disabled = false;
     };
         
 };
