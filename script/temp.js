@@ -671,65 +671,26 @@ const data = [
         "mandante": "camaroes.svg",
         "visitante": "brasil.svg"
     }
-]
-let controleRodada = 1;
-rodadaAnterior.disabled = true;
+];
+// console.log(data);
+
 const jogosDoGrupoA = data.filter(jogosA => jogosA.grupo == 'A');
-const primeiraRod = jogosDoGrupoA.filter(primeira => primeira.rodada == 1);
+// console.log(jogosDoGrupoA)
+
+const primeiraRod = jogosDoGrupoA.filter(primeira => primeira.rodada == 1)
+// console.log(primeiraRod)
 const segundaRod = jogosDoGrupoA.filter(primeira => primeira.rodada == 2);
 const tereciraRod = jogosDoGrupoA.filter(primeira => primeira.rodada == 3);
-let rodadaAnterior = document.querySelector('#btn-anterior');
-let rodadaProxima = document.querySelector('#btn-proximo');
-let identicadorRodada = document.querySelector('.rodada');
-let mandanteCima = document.getElementById('mandante-a-cima');
-let mandanteBaixo = document.getElementById('mandante-a-baixo');
-let visitanteCima = document.getElementById('visitante-a-cima');
-let visitanteBaixo = document.getElementById('visitante-a-baixo');
-const totalRodadas = 3; 
-
-let partidasPrimeira = primeiraRod.forEach(partida)
-
-rodadaAnterior.addEventListener('click', () =>{
-    controleRodada-=1;
-    identicadorRodada.innerHTML = `${controleRodada}ª RODADA`;
-    // console.log(controleRodada)
-    controleBotoes();
-    voltar(controleRodada);
-    }
-);
-rodadaProxima.addEventListener('click', () => { 
-    controleRodada+=1;
-    identicadorRodada.innerHTML = `${controleRodada}ª RODADA`;
-    // console.log(controleRodada)
-    controleBotoes();
-    avancar(controleRodada);
-    }
-);
 
 
-function controleBotoes() {   
-    if (controleRodada <= 1){
-        rodadaAnterior.disabled = true;
-    } else {
-        rodadaAnterior.disabled = false;
-    }
+// O método forEach vai executar este bloco de código para cada jogo no array 'primeiraRod'
+primeiraRod.forEach((jogo, index) => {
+    
+    // 1. Extrai os nomes dos times usando desestruturação e split
+    const [timeMandante, timeVisitante] = jogo.partida.split(' x ');
+    
+    // 2. Extrai os gols para variáveis dedicadas para maior clareza
+    const golsMandante = jogo.gols_mandante;
+    const golsVisitante = jogo.gols_visitante;
 
-    if (controleRodada >= totalRodadas) {
-        rodadaProxima.disabled = true;
-    } else {
-        rodadaProxima.disabled = false;
-    }
-};
-
-
-function voltar(controleRodada) {
-    if (controleRodada == 1) {
-        
-        
-    };
-        
-};
-
-function avancar(controleRodada) {
-   
-};
+})
