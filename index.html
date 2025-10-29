@@ -5,134 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa do mundo 2022</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Copa do Mundo FIFA de 2022</h1>
+    <header class="bg-green-500 text-center">
+        <h1 class="text-white text-5xl py-5 font-light">Copa do Mundo FIFA de 2022</h1>
     </header>
     <main>
-        <h2 id="fase1" class="titulo">FASE DE GRUPOS</h2>
-        <section id="grupo-a" class="grupo">
-            <h2>GRUPO A</h2>
-            <div id="alinhador-a" class="alinhar-elementos">
-                <table id="tabela-a" class="tabela">
-                    <thead>
-                        <tr>
-                            <th>CLASSIFICAÇÃO</th>
-                            <th>P</th>
-                            <th>J</th>
-                            <th>V</th>
-                            <th>E</th>
-                            <th>D</th>
-                            <th>GP</th>
-                            <th>GC</th>
-                            <th>SG</th>
-                            <th>%</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>Holanda</td>
-                        <td>7</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td>77</td>
-                        </tr>
-                        <tr>
-                        <td>Senegal</td>
-                        <td>6</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>1</td>
-                        <td>66</td>
-                        </tr>
-                        <tr>
-                        <td>Equador</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>1</td>
-                        <td>44</td>
-                        </tr>
-                        <tr>
-                        <td>Catar</td>
-                        <td>0</td>
-                        <td>3</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>3</td>
-                        <td>1</td>
-                        <td>7</td>
-                        <td>-6</td>
-                        <td>0</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div id="jogos-a" class="jogos">
-                    <div class="cabecalho-jogos">
-                        <button id="btn-anterior" aria-label="Rodada anterior">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                            </svg>
-                        </button>
-                        <h3 id="rodada-a" class="rodada">1ª RODADA</h3>
-                        <button id="btn-proximo" aria-label="Próxima rodada">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <section id="linha-de-cima-a" class="jogos-grupo">
-                        <div class="mandante">
-                            <span id="mandante-a-cima">Catar</span>
-                        </div>
-                        <div class="placar">
-                            <div id="gols-mandante-a-cima" class="gols">
-                                <span>2</span>
-                            </div>
-                            <p class="divisor-placar">x</p>
-                            <div id="gols-visitante-a-cima" class="gols">
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <div class="visitante">
-                            <span id="visitante-a-cima">Equador</span>
-                        </div>
-                    </section>
-                    <section id="linha-de-baixo-a" class="jogos-grupo">
-                        <div class="mandante">
-                            <span id="mandate-a-baixo">Senegal</span>
-                        </div>
-                        <div class="placar">
-                            <div id="gols-mandante-a-baixo" class="gols">
-                                <span>0</span>
-                            </div>
-                            <p class="divisor-placar">x</p>
-                            <div id="gols-visitante-a-baixo" class="gols">
-                                <span>2</span>
-                            </div>
-                        </div>
-                        <div class="visitante">
-                            <span id="visitante-a-baixo">Holanda</span>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section>
     </main>
     <footer>
 
