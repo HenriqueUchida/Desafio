@@ -1,0 +1,98 @@
+[
+  {
+    "grupo": "A", "time": "Holanda", "P": 7, "J": 3, "V": 2, "E": 1, "D": 0, "GP": 5, "GC": 1, "SG": 4, "per": 77
+  },
+  {
+    "grupo": "A", "time": "Senegal", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 5, "GC": 4, "SG": 1, "per": 66
+  },
+  {
+    "grupo": "A", "time": "Equador", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 4, "GC": 3, "SG": 1, "per": 44
+  },
+  {
+    "grupo": "A", "time": "Catar", "P": 0, "J": 3, "V": 0, "E": 0, "D": 3, "GP": 1, "GC": 7, "SG": -6, "per": 0
+  },
+  {
+    "grupo": "B", "time": "Inglaterra", "P": 7, "J": 3, "V": 2, "E": 1, "D": 0, "GP": 9, "GC": 2, "SG": 7, "per": 77
+  },
+  {
+    "grupo": "B", "time": "Estados Unidos", "P": 5, "J": 3, "V": 1, "E": 2, "D": 0, "GP": 2, "GC": 1, "SG": 1, "per": 55
+  },
+  {
+    "grupo": "B", "time": "Irã", "P": 3, "J": 3, "V": 1, "E": 0, "D": 2, "GP": 4, "GC": 7, "SG": -3, "per": 33
+  },
+  {
+    "grupo": "B", "time": "País de Gales", "P": 1, "J": 3, "V": 0, "E": 1, "D": 2, "GP": 1, "GC": 6, "SG": -5, "per": 11
+  },
+  {
+    "grupo": "C", "time": "Argentina", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 5, "GC": 2, "SG": 3, "per": 66
+  },
+  {
+    "grupo": "C", "time": "Polônia", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 2, "GC": 2, "SG": 0, "per": 44
+  },
+  {
+    "grupo": "C", "time": "México", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 2, "GC": 3, "SG": -1, "per": 44
+  },
+  {
+    "grupo": "C", "time": "Arábia Saudita", "P": 3, "J": 3, "V": 1, "E": 0, "D": 2, "GP": 3, "GC": 5, "SG": -2, "per": 33
+  },
+  {
+    "grupo": "D", "time": "França", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 6, "GC": 3, "SG": 3, "per": 66
+  },
+  {
+    "grupo": "D", "time": "Austrália", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 3, "GC": 4, "SG": -1, "per": 66
+  },
+  {
+    "grupo": "D", "time": "Tunísia", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 1, "GC": 1, "SG": 0, "per": 44
+  },
+  {
+    "grupo": "D", "time": "Dinamarca", "P": 1, "J": 3, "V": 0, "E": 1, "D": 2, "GP": 1, "GC": 3, "SG": -2, "per": 11
+  },
+  {
+    "grupo": "E", "time": "Japão", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 4, "GC": 3, "SG": 1, "per": 66
+  },
+  {
+    "grupo": "E", "time": "Espanha", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 9, "GC": 3, "SG": 6, "per": 44
+  },
+  {
+    "grupo": "E", "time": "Alemanha", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 6, "GC": 5, "SG": 1, "per": 44
+  },
+  {
+    "grupo": "E", "time": "Costa Rica", "P": 3, "J": 3, "V": 1, "E": 0, "D": 2, "GP": 3, "GC": 11, "SG": -8, "per": 33
+  },
+  {
+    "grupo": "F", "time": "Marrocos", "P": 7, "J": 3, "V": 2, "E": 1, "D": 0, "GP": 4, "GC": 1, "SG": 3, "per": 77
+  },
+  {
+    "grupo": "F", "time": "Croácia", "P": 5, "J": 3, "V": 1, "E": 2, "D": 0, "GP": 4, "GC": 1, "SG": 3, "per": 55
+  },
+  {
+    "grupo": "F", "time": "Bélgica", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 1, "GC": 2, "SG": -1, "per": 44
+  },
+  {
+    "grupo": "F", "time": "Canadá", "P": 0, "J": 3, "V": 0, "E": 0, "D": 3, "GP": 2, "GC": 7, "SG": -5, "per": 0
+  },
+  {
+    "grupo": "G", "time": "Brasil", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 3, "GC": 1, "SG": 2, "per": 66
+  },
+  {
+    "grupo": "G", "time": "Suíça", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 4, "GC": 3, "SG": 1, "per": 66
+  },
+  {
+    "grupo": "G", "time": "Camarões", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 4, "GC": 4, "SG": 0, "per": 44
+  },
+  {
+    "grupo": "G", "time": "Sérvia", "P": 1, "J": 3, "V": 0, "E": 1, "D": 2, "GP": 5, "GC": 8, "SG": -3, "per": 11
+  },
+  {
+    "grupo": "H", "time": "Portugal", "P": 6, "J": 3, "V": 2, "E": 0, "D": 1, "GP": 6, "GC": 4, "SG": 2, "per": 66
+  },
+  {
+    "grupo": "H", "time": "Coreia do Sul", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 4, "GC": 4, "SG": 0, "per": 44
+  },
+  {
+    "grupo": "H", "time": "Uruguai", "P": 4, "J": 3, "V": 1, "E": 1, "D": 1, "GP": 2, "GC": 2, "SG": 0, "per": 44
+  },
+  {
+    "grupo": "H", "time": "Gana", "P": 3, "J": 3, "V": 1, "E": 0, "D": 2, "GP": 5, "GC": 7, "SG": -2, "per": 33
+  }
+]
