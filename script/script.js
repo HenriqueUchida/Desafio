@@ -15,6 +15,7 @@ async function carregarDados() {
 
         // Agora chame sua função principal, passando os dados que ela precisa
         gerarTabelas(grupos, todaClassificacao);
+    
         
 
     } catch (error) {
@@ -24,19 +25,21 @@ async function carregarDados() {
 
 function gerarTabelas(listaGrupos, classificacaoData) {
     const containerMain = document.querySelector('main');
-    containerMain.classList.add('h-screen', 'w-screen', 'flex', 'flex-col', 'gap-5', 'col-span-1')
+    containerMain.classList.add('h-screen', '@container', 'w-screen', 'grid', 'grid-cols-1', 'md:grid-cols-2','gap-5') //h-screen w-screen grid grid-cols-1 md:grid-cols-2 grid-rows-6
     const parametrosClassificacao = ['#', 'CLASSIFICACAO', 'P', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', '%'];
     listaGrupos.forEach(element => {
+        let containerPai = document.createElement('section');
         let sessaoGrupo = document.createElement('section');
-        sessaoGrupo.id = `container-grupo${element}`;
-        sessaoGrupo.classList.add('grupo', 'flex', 'flex-col', 'gap-2');
-        containerMain.appendChild(sessaoGrupo);
+        containerPai.id = `container-grupo${element}`;
+        containerPai.classList.add('grupo', 'w-full', 'flex', 'flex-col', 'gap-2', 'md:col-span-1');
+        containerMain.appendChild(containerPai);
         let tituloGrupo = document.createElement('h2');
         tituloGrupo.textContent = `Grupo ${element}`;
         tituloGrupo.classList.add('titulo-grupo', 'font-bold', 'text-2xl');
-        sessaoGrupo.appendChild(tituloGrupo);
+        containerPai.appendChild(tituloGrupo);
         let classificacao = document.createElement('table');
-        sessaoGrupo.appendChild(classificacao);
+        classificacao.classList.add('block', 'w-1/2')
+        containerPai.appendChild(classificacao);
         let cabecalhoTabela = document.createElement('tr');
         cabecalhoTabela.id = `cabecalho-grupo${element}`;
         cabecalhoTabela.classList.add('cabecalho', 'gap-2');
@@ -59,8 +62,9 @@ function gerarTabelas(listaGrupos, classificacaoData) {
             return 0;
 
         });
+        const jogosGrupo = todosOsJogos.filter(jogos => jogos.grupo === element); 
         renderizarLinhasTime(classificacao, timesGrupo);
-
+        gerarJogos(jogosGrupo, containerPai);
     })
 };
 
@@ -86,8 +90,34 @@ function renderizarLinhasTime(tabelaClassificao, timesGrupo) {
     tabelaClassificao.appendChild(tbody);
 };
 
-function gerarJogos(grupo, todosOsJogos){
-    return
+function gerarJogos(jogosDoGrupo, elementoPai){
+    let containerJogos = document.createElement('section');
+    containerJogos.classList.add('md:col-span-1');
+
+    let cabecalhoJogos = document.createElement('header');
+    containerJogos.appendChild(cabecalhoJogos);
+    
+    let btnVoltar = document.createElement('button');
+    btnVoltar.textContent = 'voltar';
+    cabecalhoJogos.appendChild(btnVoltar);
+    
+    let textCabecalho = document.createElement('h3');
+    textCabecalho.textContent = '1° Partida';
+    cabecalhoJogos.appendChild(textCabecalho);
+
+    let btnAvancar = document.createElement('button');
+    btnAvancar.textContent = 'avancar'
+    cabecalhoJogos.appendChild(btnAvancar);
+
+    let containerJogo1 = document.createElement('div');
+    containerJogo1.textContent = 'Jogo linha de cima';
+    containerJogos.appendChild(containerJogo1);
+
+    let containerJogo2 = document.createElement('div');
+    containerJogo2.textContent = 'Jogo linha de baixo';
+    containerJogos.appendChild(containerJogo2);
+
+    elementoPai.appendChild(containerJogos);
 }
 
 
