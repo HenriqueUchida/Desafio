@@ -25,24 +25,26 @@ async function carregarDados() {
 
 function gerarTabelas(listaGrupos, classificacaoData) {
     const containerMain = document.querySelector('main');
-    containerMain.classList.add('h-screen', '@container', 'w-screen', 'grid', 'grid-cols-1', 'md:grid-cols-2','gap-5') //h-screen w-screen grid grid-cols-1 md:grid-cols-2 grid-rows-6
+    containerMain.classList.add('h-screen', '@container', 'w-screen', 'flex', 'flex-col');
     const parametrosClassificacao = ['#', 'CLASSIFICACAO', 'P', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', '%'];
     listaGrupos.forEach(element => {
         let containerPai = document.createElement('section');
         let sessaoGrupo = document.createElement('section');
         containerPai.id = `container-grupo${element}`;
-        containerPai.classList.add('grupo', 'w-full', 'flex', 'flex-col', 'gap-2', 'md:col-span-1');
+        containerPai.classList.add('grupo', 'w-full', 'grid', 'grid-cols-1', 'grid-rows-3', 'md:grid-cols-2', 'col-span-2');
         containerMain.appendChild(containerPai);
         let tituloGrupo = document.createElement('h2');
+        tituloGrupo.classList.add('mb-1');
         tituloGrupo.textContent = `Grupo ${element}`;
-        tituloGrupo.classList.add('titulo-grupo', 'font-bold', 'text-2xl');
-        containerPai.appendChild(tituloGrupo);
+        tituloGrupo.classList.add('titulo-grupo', 'h-auto', 'w-full','font-bold', 'text-2xl', 'row-span-1');
+        sessaoGrupo.appendChild(tituloGrupo);
         let classificacao = document.createElement('table');
-        classificacao.classList.add('block', 'w-1/2')
-        containerPai.appendChild(classificacao);
+        sessaoGrupo.classList.add('row-span-2', 'h-auto', 'md:col-span-1', 'md:row-span-2')
+        sessaoGrupo.appendChild(classificacao);
+        containerPai.appendChild(sessaoGrupo);
         let cabecalhoTabela = document.createElement('tr');
         cabecalhoTabela.id = `cabecalho-grupo${element}`;
-        cabecalhoTabela.classList.add('cabecalho', 'gap-2');
+        cabecalhoTabela.classList.add('cabecalho');
         classificacao.appendChild(cabecalhoTabela);
         parametrosClassificacao.forEach(elementosCabecalho => {
             let colunaCabecalho = document.createElement('th');
@@ -92,7 +94,7 @@ function renderizarLinhasTime(tabelaClassificao, timesGrupo) {
 
 function gerarJogos(jogosDoGrupo, elementoPai){
     let containerJogos = document.createElement('section');
-    containerJogos.classList.add('md:col-span-1');
+    containerJogos.classList.add('h-auto', 'row-span-3', 'md:col-span-2', 'md:row-span-2');
 
     let cabecalhoJogos = document.createElement('header');
     containerJogos.appendChild(cabecalhoJogos);
