@@ -1,0 +1,17 @@
+# Dependências do Node
+node_modules/
+
+# Caches
+.cache/
+dist/
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações de editor
+.vscode/
+.idea/

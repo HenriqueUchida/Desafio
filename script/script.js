@@ -1,4 +1,4 @@
-const grupos = ['A'];//, 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+const grupos = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 let todosOsJogos = [];
 let todaClassificacao = [];
 
@@ -26,7 +26,7 @@ async function carregarDados() {
 function gerarTabelas(listaGrupos, classificacaoData) {
     const containerMain = document.querySelector('main');
     // Adicionei 'p-4' para dar um respiro na borda da tela
-    containerMain.classList.add('h-screen', '@container', 'w-screen', 'flex', 'flex-col', 'p-4'); 
+    containerMain.classList.add('h-screen', '@container', 'w-full', 'flex', 'flex-col', 'items-center','p-4'); 
     
     const parametrosClassificacao = ['#', 'CLASSIFICACAO', 'P', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', '%'];
     
@@ -38,7 +38,7 @@ function gerarTabelas(listaGrupos, classificacaoData) {
         
         // --- ALTERAÇÃO 1: O GRID ---
         // Mobile: 1 coluna | Desktop (md): 2 colunas | gap-4 para espaçamento
-        containerPai.classList.add('grupo', 'w-full', 'grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-4', 'mb-8');
+        containerPai.classList.add('grupo', 'w-3/4', 'grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-6', 'mb-8');
         
         containerMain.appendChild(containerPai);
         
@@ -53,15 +53,13 @@ function gerarTabelas(listaGrupos, classificacaoData) {
         containerPai.appendChild(tituloGrupo);
         
         let classificacao = document.createElement('table');
+        classificacao.classList.add('h-full', 'w-full');
         
-        // --- ALTERAÇÃO 3: A TABELA ---
-        // Removemos row-span desnecessários. Adicionei overflow-x-auto para a tabela não quebrar em telas pequenas
-        sessaoGrupo.classList.add('h-auto', 'overflow-x-auto'); 
+        sessaoGrupo.classList.add('h-full', 'overflow-x-auto'); 
         
         sessaoGrupo.appendChild(classificacao);
         containerPai.appendChild(sessaoGrupo);
 
-        // ... (Resto do código da tabela permanece igual) ...
         let cabecalhoTabela = document.createElement('tr');
         cabecalhoTabela.id = `cabecalho-grupo${element}`;
         cabecalhoTabela.classList.add('cabecalho');
@@ -70,7 +68,7 @@ function gerarTabelas(listaGrupos, classificacaoData) {
             let colunaCabecalho = document.createElement('th');
             colunaCabecalho.textContent = `${elementosCabecalho}`;
             // Sugestão: Adicionar padding nas células
-            colunaCabecalho.classList.add('px-2', 'text-center'); 
+            // colunaCabecalho.classList.add('px-2'); 
             cabecalhoTabela.appendChild(colunaCabecalho);
         })
         
@@ -86,7 +84,7 @@ function gerarTabelas(listaGrupos, classificacaoData) {
 
         const jogosGrupo = todosOsJogos.filter(jogos => jogos.grupo === element); 
         renderizarLinhasTime(classificacao, timesGrupo);
-        gerarJogos(jogosGrupo, containerPai);
+        gerarJogos(element, jogosGrupo, containerPai);
     })
 };
 
@@ -112,13 +110,11 @@ function renderizarLinhasTime(tabelaClassificao, timesGrupo) {
     tabelaClassificao.appendChild(tbody);
 };
 
-function gerarJogos(jogosDoGrupo, elementoPai){
+function gerarJogos(grupo, jogosDoGrupo, elementoPai){
+    console.log(jogosDoGrupo);
     let containerJogos = document.createElement('section');
-    
-    // --- ALTERAÇÃO 4: OS JOGOS ---
-    // Removemos as classes de grid manuais antigas. 
-    // Ele cairá naturalmente na segunda coluna no desktop, pois o título ocupou 2 slots e a tabela ocupou o slot 1 da linha 2.
-    containerJogos.classList.add('h-auto', 'flex', 'flex-col', 'gap-2');
+    containerJogos.id = `jogos-grupo-${grupo}`
+    containerJogos.classList.add('jogos', 'h-full', 'w-full', 'md:max-w-[400px]','flex', 'flex-col', 'gap-1');
 
     let cabecalhoJogos = document.createElement('header');
     cabecalhoJogos.classList.add('flex', 'justify-between', 'items-center', 'mb-2'); // Estilização básica flex
@@ -126,32 +122,71 @@ function gerarJogos(jogosDoGrupo, elementoPai){
     
     let btnVoltar = document.createElement('button');
     btnVoltar.textContent = '<';
-    btnVoltar.classList.add('p-2', 'bg-gray-200', 'rounded'); // Estilo básico
+    btnVoltar.id = `btn-voltar-${grupo}`
+    btnVoltar.classList.add('voltar', 'p-2', 'bg-gray-200', 'rounded', 'cursor-not-allowed'); // Estilo básico
     cabecalhoJogos.appendChild(btnVoltar);
     
     let textCabecalho = document.createElement('h3');
-    textCabecalho.textContent = '1ª Partida';
+    textCabecalho.innerHTML = `<span id=rodada-grupo-${grupo}>1</span>ª Partida`;
+    textCabecalho.classList.add('font-black');
     cabecalhoJogos.appendChild(textCabecalho);
 
     let btnAvancar = document.createElement('button');
     btnAvancar.textContent = '>'
-    btnAvancar.classList.add('p-2', 'bg-gray-200', 'rounded'); // Estilo básico
+    btnAvancar.id = `btn-avancar-${grupo}`
+    btnAvancar.classList.add('avancar','p-2', 'bg-gray-200', 'rounded', 'cursor-pointer'); // Estilo básico
     cabecalhoJogos.appendChild(btnAvancar);
 
-    // Exemplo de card de jogo
-    let containerJogo1 = document.createElement('div');
-    containerJogo1.textContent = 'Time A vs Time B';
-    containerJogo1.classList.add('p-4', 'border', 'rounded', 'bg-gray-50');
-    containerJogos.appendChild(containerJogo1);
+    for(let i = 0; i < 2; i++){
+        let jogo = jogosDoGrupo[i];
+        let [mandanteNome, visitanteNome] = jogo.partida.split(" x ");
+        let golsMandante = jogo.gols_mandante;
+        let golsVisitante = jogo.gols_visitante;
+        let containerJogo = document.createElement('div');
+        containerJogo.id = `linha-jogo-${i+1}-${grupo}`;
+        containerJogo.classList.add(`jogos-${grupo}`, 'w-full', 'h-full', 'flex', 'space-between');
 
-    let containerJogo2 = document.createElement('div');
-    containerJogo2.textContent = 'Time C vs Time D';
-    containerJogo2.classList.add('p-4', 'border', 'rounded', 'bg-gray-50');
-    containerJogos.appendChild(containerJogo2);
+        let containerEsq = document.createElement('div');
+        containerEsq.id = `container-mandante-${i+1}-${grupo}`;
+        containerEsq.classList.add('container-mandante', 'h-full', 'w-1/3', 'flex','items-center', 'justify-center');
+        containerEsq.textContent = mandanteNome;
+        containerJogo.appendChild(containerEsq);
 
+
+        let containerPlacar = document.createElement('div');
+        containerPlacar.classList.add('h-full', 'w-1/3', 'grid', 'grid-cols-3', 'justify-items-center', 'items-end', 'place-content-center')
+        containerJogo.appendChild(containerPlacar);
+
+        let placarMandante = document.createElement('span');
+        placarMandante.textContent = golsMandante
+        placarMandante.classList.add('col-start-1');
+        containerPlacar.appendChild(placarMandante);
+
+        let divisorPlacar = document.createElement('span');
+        divisorPlacar.textContent = 'X';
+        divisorPlacar.classList.add('col-start-2');
+        containerPlacar.appendChild(divisorPlacar);
+
+
+        let containerDir = document.createElement('div');
+        containerDir.textContent = visitanteNome;
+        containerDir.id = `container-visitante-${i+1}-${grupo}`;
+        containerDir.classList.add('container-visitante', 'h-full', 'w-1/3', 'flex','items-center', 'justify-center');
+        containerJogo.appendChild(containerDir);
+
+        let placarVisitante = document.createElement('span');
+        placarVisitante.textContent = golsVisitante
+        placarVisitante.classList.add('col-start-3');
+        containerPlacar.appendChild(placarVisitante);
+
+        containerJogos.appendChild(containerJogo);
+        
+    }
+
+    
     elementoPai.appendChild(containerJogos);
 }
 
 
 
-document.addEventListener("DOMContentLoaded", carregarDados());
+document.addEventListener("DOMContentLoaded", carregarDados);
