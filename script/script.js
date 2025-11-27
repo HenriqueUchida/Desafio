@@ -26,7 +26,7 @@ async function carregarDados() {
 function gerarTabelas(listaGrupos, classificacaoData) {
     const containerMain = document.querySelector('main');
     // Adicionei 'p-4' para dar um respiro na borda da tela
-    containerMain.classList.add('h-screen', '@container', 'w-full', 'flex', 'flex-col', 'items-center','p-4'); 
+    containerMain.classList.add('@container', 'w-full', 'flex', 'flex-col', 'items-center','p-4'); 
     
     const parametrosClassificacao = ['#', 'CLASSIFICACAO', 'P', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', '%'];
     
@@ -38,7 +38,7 @@ function gerarTabelas(listaGrupos, classificacaoData) {
         
         // --- ALTERAÇÃO 1: O GRID ---
         // Mobile: 1 coluna | Desktop (md): 2 colunas | gap-4 para espaçamento
-        containerPai.classList.add('grupo', 'w-3/4', 'grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-6', 'mb-8');
+        containerPai.classList.add('grupo', 'w-5/6', 'md:w-3/4', 'grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-6', 'mb-8');
         
         containerMain.appendChild(containerPai);
         
@@ -111,13 +111,12 @@ function renderizarLinhasTime(tabelaClassificao, timesGrupo) {
 };
 
 function gerarJogos(grupo, jogosDoGrupo, elementoPai){
-    console.log(jogosDoGrupo);
     let containerJogos = document.createElement('section');
     containerJogos.id = `jogos-grupo-${grupo}`
     containerJogos.classList.add('jogos', 'h-full', 'w-full', 'md:max-w-[400px]','flex', 'flex-col', 'gap-1');
 
     let cabecalhoJogos = document.createElement('header');
-    cabecalhoJogos.classList.add('flex', 'justify-between', 'items-center', 'mb-2'); // Estilização básica flex
+    cabecalhoJogos.classList.add('flex', 'justify-between', 'items-center', 'mb-1', 'border-t', 'border-b', 'border-gray-300', 'p-1'); // Estilização básica flex
     containerJogos.appendChild(cabecalhoJogos);
     
     let btnVoltar = document.createElement('button');
@@ -140,43 +139,57 @@ function gerarJogos(grupo, jogosDoGrupo, elementoPai){
     for(let i = 0; i < 2; i++){
         let jogo = jogosDoGrupo[i];
         let [mandanteNome, visitanteNome] = jogo.partida.split(" x ");
+        let bandeiraMandante = jogo.mandante;
+        let bandeiraVisitante = jogo.visitante;
         let golsMandante = jogo.gols_mandante;
         let golsVisitante = jogo.gols_visitante;
+        let data = jogo.data;
+        let diaSemana = jogo.diaSemana;
+        let horario = jogo.hora;
+        let estadio = jogo.estadio;
         let containerJogo = document.createElement('div');
         containerJogo.id = `linha-jogo-${i+1}-${grupo}`;
-        containerJogo.classList.add(`jogos-${grupo}`, 'w-full', 'h-full', 'flex', 'space-between');
+        containerJogo.classList.add(`jogos-${grupo}`, 'w-full', 'h-full', 'grid', 'grid-cols-3', 'place-items-center', 'gap-3', 'text-2xl', 'font-light', 'grid-cols-[auto_auto_auto]');
+
+        let containerData = document.createElement('div');
+        containerData.classList.add('col-span-3');
+        containerData.innerHTML = `<span class="text-xs font-semibold">${estadio} - ${data} - ${diaSemana} - ${horario}</span>`;
+        containerJogo.appendChild(containerData);
 
         let containerEsq = document.createElement('div');
         containerEsq.id = `container-mandante-${i+1}-${grupo}`;
-        containerEsq.classList.add('container-mandante', 'h-full', 'w-1/3', 'flex','items-center', 'justify-center');
-        containerEsq.textContent = mandanteNome;
+        containerEsq.classList.add('container-mandante', 'flex','items-center');
+        // <img src="imagens/bandeiras/alemanha.png" alt=""></img>
+        containerEsq.innerHTML = `<span>${mandanteNome}</span><img class="w-[34px] h-[34px] ml-3" src="./imagens/bandeiras/${bandeiraMandante}"></img>`;
+        // containerEsq.textContent = mandanteNome;
         containerJogo.appendChild(containerEsq);
 
 
         let containerPlacar = document.createElement('div');
-        containerPlacar.classList.add('h-full', 'w-1/3', 'grid', 'grid-cols-3', 'justify-items-center', 'items-end', 'place-content-center')
+        containerPlacar.classList.add('h-full', 'w-1/2', 'grid', 'grid-cols-3', 'justify-items-center', 'items-end', 'place-content-center')
         containerJogo.appendChild(containerPlacar);
 
         let placarMandante = document.createElement('span');
         placarMandante.textContent = golsMandante
-        placarMandante.classList.add('col-start-1');
+        placarMandante.classList.add('col-start-1', 'font-bold', 'w-auto');
         containerPlacar.appendChild(placarMandante);
 
         let divisorPlacar = document.createElement('span');
         divisorPlacar.textContent = 'X';
-        divisorPlacar.classList.add('col-start-2');
+        divisorPlacar.classList.add('col-start-2', 'text-sm', 'font-semibold', 'justify-center', 'mb-1', 'mx-2', 'text-gray-300');
         containerPlacar.appendChild(divisorPlacar);
 
 
         let containerDir = document.createElement('div');
         containerDir.textContent = visitanteNome;
         containerDir.id = `container-visitante-${i+1}-${grupo}`;
-        containerDir.classList.add('container-visitante', 'h-full', 'w-1/3', 'flex','items-center', 'justify-center');
+        containerDir.classList.add('container-visitante', 'flex','items-center', 'justify-center');
+        containerDir.innerHTML = `<img class="w-[34px] h-[34px] mr-3" src="./imagens/bandeiras/${bandeiraVisitante}"></img><span>${visitanteNome}</span>`;
         containerJogo.appendChild(containerDir);
 
         let placarVisitante = document.createElement('span');
         placarVisitante.textContent = golsVisitante
-        placarVisitante.classList.add('col-start-3');
+        placarVisitante.classList.add('col-start-3', 'font-bold');
         containerPlacar.appendChild(placarVisitante);
 
         containerJogos.appendChild(containerJogo);

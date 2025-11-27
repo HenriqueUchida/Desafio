@@ -10,8 +10,8 @@
         "gols_mandante": "0",
         "partida": "CAT x EQU",
         "gols_visitante": "2",
-        "mandante": "catar.svg",
-        "visitante": "equador.svg"
+        "mandante": "catar.png",
+        "visitante": "equador.png"
     },
     {
         "id": 2,
@@ -24,8 +24,8 @@
         "gols_mandante": "6",
         "partida": "ING x IRA",
         "gols_visitante": "2",
-        "mandante": "inglaterra.svg",
-        "visitante": "ira.svg"
+        "mandante": "inglaterra.png",
+        "visitante": "ira.png"
     },
     {
         "id": 3,
@@ -38,8 +38,8 @@
         "gols_mandante": "0",
         "partida": "SEN x HOL",
         "gols_visitante": "2",
-        "mandante": "senegal.svg",
-        "visitante": "holanda.svg"
+        "mandante": "senegal.png",
+        "visitante": "holanda.png"
     },
     {
         "id": 4,
@@ -52,8 +52,8 @@
         "gols_mandante": "1",
         "partida": "EUA x GAL",
         "gols_visitante": "1",
-        "mandante": "estados_unidos.svg",
-        "visitante": "pais_de_gales.svg"
+        "mandante": "estados-unidos.png",
+        "visitante": "pais-de-gales.png"
     },   
     {
         "id": 5,
@@ -66,8 +66,8 @@
         "gols_mandante": "1",
         "partida": "ARG x ARA",
         "gols_visitante": "2",
-        "mandante": "argentina.svg",
-        "visitante": "arabia_saudita.svg"
+        "mandante": "argentina.png",
+        "visitante": "arabia-saudita.png"
     },
     {
         "id": 6,
@@ -80,8 +80,8 @@
         "gols_mandante": "0",
         "partida": "DIN x TUN",
         "gols_visitante": "0",
-        "mandante": "dinamarca.svg",
-        "visitante": "tunisia.svg"
+        "mandante": "dinamarca.png",
+        "visitante": "tunisia.png"
     },
     {
         "id": 7,
@@ -94,8 +94,8 @@
         "gols_mandante": "0",
         "partida": "MEX x POL",
         "gols_visitante": "0",
-        "mandante": "mexico.svg",
-        "visitante": "polonia.svg"
+        "mandante": "mexico.png",
+        "visitante": "polonia.png"
     },    
     {
         "id": 8,
@@ -108,8 +108,8 @@
         "gols_mandante": "4",
         "partida": "FRA x AUS",
         "gols_visitante": "1",
-        "mandante": "franca.svg",
-        "visitante": "australia.svg"
+        "mandante": "franca.png",
+        "visitante": "australia.png"
     },
     {
         "id": 9,
@@ -122,8 +122,8 @@
         "gols_mandante": "0",
         "partida": "MAR x CRO",
         "gols_visitante": "0",
-        "mandante": "marrocos.svg",
-        "visitante": "croacia.svg"
+        "mandante": "marrocos.png",
+        "visitante": "croacia.png"
     },
     {
         "id": 10,
@@ -136,8 +136,8 @@
         "gols_mandante": "1",
         "partida": "ALE x JAP",
         "gols_visitante": "2",
-        "mandante": "alemanha.svg",
-        "visitante": "japao.svg"
+        "mandante": "alemanha.png",
+        "visitante": "japao.png"
     },
     {
         "id": 11,
@@ -150,8 +150,8 @@
         "gols_mandante": "7",
         "partida": "ESP x COS",
         "gols_visitante": "0",
-        "mandante": "espanha.svg",
-        "visitante": "costa_rica.svg"
+        "mandante": "espanha.png",
+        "visitante": "costa-rica.png"
     },
     {
         "id": 12,
@@ -164,8 +164,8 @@
         "gols_mandante": "1",
         "partida": "BEL x CAN",
         "gols_visitante": "0",
-        "mandante": "belgica.svg",
-        "visitante": "canada.svg"
+        "mandante": "belgica.png",
+        "visitante": "canada.png"
     },
     {
         "id": 13,
@@ -178,8 +178,8 @@
         "gols_mandante": "",
         "partida": "SUI x CAM",
         "gols_visitante": "",
-        "mandante": "suica.svg",
-        "visitante": "camaroes.svg"
+        "mandante": "suica.png",
+        "visitante": "camaroes.png"
     },
     {
         "id": 14,
@@ -192,8 +192,8 @@
         "gols_mandante": "",
         "partida": "URU x COR",
         "gols_visitante": "",
-        "mandante": "uruguai.svg",
-        "visitante": "coreia_do_sul.svg"
+        "mandante": "uruguai.png",
+        "visitante": "coreia-do-sul.png"
     },
     {
         "id": 15,
@@ -206,8 +206,8 @@
         "gols_mandante": "",
         "partida": "POR x GAN",
         "gols_visitante": "",
-        "mandante": "portugal.svg",
-        "visitante": "gana.svg"
+        "mandante": "portugal.png",
+        "visitante": "gana.png"
     },
     {
         "id": 16,
@@ -220,8 +220,8 @@
         "gols_mandante": "",
         "partida": "BRA x SER",
         "gols_visitante": "",
-        "mandante": "brasil.svg",
-        "visitante": "servia.svg"
+        "mandante": "brasil.png",
+        "visitante": "servia.png"
     },
     {
         "id": 17,
@@ -234,8 +234,8 @@
         "gols_mandante": "",
         "partida": "GAL x IRA",
         "gols_visitante": "",
-        "mandante": "pais_de_gales.svg",
-        "visitante": "ira.svg"
+        "mandante": "pais-de-gales.png",
+        "visitante": "ira.png"
     },
     {
         "id": 18,
@@ -248,8 +248,8 @@
         "gols_mandante": "",
         "partida": "CAT x SEN",
         "gols_visitante": "",
-        "mandante": "catar.svg",
-        "visitante": "senegal.svg"
+        "mandante": "catar.png",
+        "visitante": "senegal.png"
     },
     {
         "id": 19,
@@ -262,8 +262,8 @@
         "gols_mandante": "",
         "partida": "HOL x EQU",
         "gols_visitante": "",
-        "mandante": "holanda.svg",
-        "visitante": "equador.svg"
+        "mandante": "holanda.png",
+        "visitante": "equador.png"
     },
     {
         "id": 20,
@@ -276,8 +276,8 @@
         "gols_mandante": "",
         "partida": "ING x EUA",
         "gols_visitante": "",
-        "mandante": "inglaterra.svg",
-        "visitante": "estados_unidos.svg"
+        "mandante": "inglaterra.png",
+        "visitante": "estados-unidos.png"
     },
     {
         "id": 21,
@@ -290,8 +290,8 @@
         "gols_mandante": "",
         "partida": "TUN x AUS",
         "gols_visitante": "",
-        "mandante": "tunisia.svg",
-        "visitante": "australia.svg"
+        "mandante": "tunisia.png",
+        "visitante": "australia.png"
     },
     {
         "id": 22,
@@ -304,8 +304,8 @@
         "gols_mandante": "",
         "partida": "POL x ARA",
         "gols_visitante": "",
-        "mandante": "polonia.svg",
-        "visitante": "arabia_saudita.svg"
+        "mandante": "polonia.png",
+        "visitante": "arabia-saudita.png"
     },
     {
         "id": 23,
@@ -318,8 +318,8 @@
         "gols_mandante": "",
         "partida": "FRA x DIN",
         "gols_visitante": "",
-        "mandante": "franca.svg",
-        "visitante": "dinamarca.svg"
+        "mandante": "franca.png",
+        "visitante": "dinamarca.png"
     },
     {
         "id": 24,
@@ -332,8 +332,8 @@
         "gols_mandante": "",
         "partida": "ARG x MEX",
         "gols_visitante": "",
-        "mandante": "argentina.svg",
-        "visitante": "mexico.svg"
+        "mandante": "argentina.png",
+        "visitante": "mexico.png"
     },    
     {
         "id": 25,
@@ -346,8 +346,8 @@
         "gols_mandante": "",
         "partida": "JAP x COS",
         "gols_visitante": "",
-        "mandante": "japao.svg",
-        "visitante": "costa_rica.svg"
+        "mandante": "japao.png",
+        "visitante": "costa-rica.png"
     },
     {
         "id": 26,
@@ -360,8 +360,8 @@
         "gols_mandante": "",
         "partida": "BEL x MAR",
         "gols_visitante": "",
-        "mandante": "belgica.svg",
-        "visitante": "marrocos.svg"
+        "mandante": "belgica.png",
+        "visitante": "marrocos.png"
     },
     {
         "id": 27,
@@ -374,8 +374,8 @@
         "gols_mandante": "",
         "partida": "CRO x CAN",
         "gols_visitante": "",
-        "mandante": "croacia.svg",
-        "visitante": "canada.svg"
+        "mandante": "croacia.png",
+        "visitante": "canada.png"
     },
     {
         "id": 28,
@@ -388,8 +388,8 @@
         "gols_mandante": "",
         "partida": "ESP x ALE",
         "gols_visitante": "",
-        "mandante": "espanha.svg",
-        "visitante": "alemanha.svg"
+        "mandante": "espanha.png",
+        "visitante": "alemanha.png"
     },
     {
         "id": 29,
@@ -402,8 +402,8 @@
         "gols_mandante": "",
         "partida": "CAM x SER",
         "gols_visitante": "",
-        "mandante": "camaroes.svg",
-        "visitante": "servia.svg"
+        "mandante": "camaroes.png",
+        "visitante": "servia.png"
     },
     {
         "id": 30,
@@ -416,8 +416,8 @@
         "gols_mandante": "",
         "partida": "COR x GAN",
         "gols_visitante": "",
-        "mandante": "coreia_do_sul.svg",
-        "visitante": "gana.svg"
+        "mandante": "coreia-do-sul.png",
+        "visitante": "gana.png"
     },
     {
         "id": 31,
@@ -430,8 +430,8 @@
         "gols_mandante": "",
         "partida": "BRA x SUI",
         "gols_visitante": "",
-        "mandante": "brasil.svg",
-        "visitante": "suica.svg"
+        "mandante": "brasil.png",
+        "visitante": "suica.png"
     },
     {
         "id": 32,
@@ -444,8 +444,8 @@
         "gols_mandante": "",
         "partida": "POR x URU",
         "gols_visitante": "",
-        "mandante": "portugal.svg",
-        "visitante": "uruguai.svg"
+        "mandante": "portugal.png",
+        "visitante": "uruguai.png"
     },
     {
         "id": 33,
@@ -458,8 +458,8 @@
         "gols_mandante": "",
         "partida": "EQU x SEN",
         "gols_visitante": "",
-        "mandante": "equador.svg",
-        "visitante": "senegal.svg"
+        "mandante": "equador.png",
+        "visitante": "senegal.png"
     },
     {
         "id": 34,
@@ -472,8 +472,8 @@
         "gols_mandante": "",
         "partida": "HOL x CAT",
         "gols_visitante": "",
-        "mandante": "holanda.svg",
-        "visitante": "catar.svg"
+        "mandante": "holanda.png",
+        "visitante": "catar.png"
     },
     {
         "id": 35,
@@ -486,8 +486,8 @@
         "gols_mandante": "",
         "partida": "IRA x EUA",
         "gols_visitante": "",
-        "mandante": "ira.svg",
-        "visitante": "estados_unidos.svg"
+        "mandante": "ira.png",
+        "visitante": "estados-unidos.png"
     },   
     {
         "id": 36,
@@ -500,8 +500,8 @@
         "gols_mandante": "",
         "partida": "GAL x ING",
         "gols_visitante": "",
-        "mandante": "pais_de_gales.svg",
-        "visitante": "inglaterra.svg"
+        "mandante": "pais-de-gales.png",
+        "visitante": "inglaterra.png"
     },
     {
         "id": 37,
@@ -514,8 +514,8 @@
         "gols_mandante": "",
         "partida": "TUN x FRA",
         "gols_visitante": "",
-        "mandante": "tunisia.svg",
-        "visitante": "franca.svg"
+        "mandante": "tunisia.png",
+        "visitante": "franca.png"
     },
     {
         "id": 38,
@@ -528,8 +528,8 @@
         "gols_mandante": "",
         "partida": "AUS x DIN",
         "gols_visitante": "",
-        "mandante": "australia.svg",
-        "visitante": "dinamarca.svg"
+        "mandante": "australia.png",
+        "visitante": "dinamarca.png"
     },
     {
         "id": 39,
@@ -542,8 +542,8 @@
         "gols_mandante": "",
         "partida": "POL x ARG",
         "gols_visitante": "",
-        "mandante": "polonia.svg",
-        "visitante": "argentina.svg"
+        "mandante": "polonia.png",
+        "visitante": "argentina.png"
     },
     {
         "id": 40,
@@ -556,8 +556,8 @@
         "gols_mandante": "",
         "partida": "ARA x MEX",
         "gols_visitante": "",
-        "mandante": "arabia_saudita.svg",
-        "visitante": "mexico.svg"
+        "mandante": "arabia-saudita.png",
+        "visitante": "mexico.png"
     },    
     {
         "id": 41,
@@ -570,8 +570,8 @@
         "gols_mandante": "",
         "partida": "CRO x BEL",
         "gols_visitante": "",
-        "mandante": "croacia.svg",
-        "visitante": "belgica.svg"
+        "mandante": "croacia.png",
+        "visitante": "belgica.png"
     },
     {
         "id": 42,
@@ -584,8 +584,8 @@
         "gols_mandante": "",
         "partida": "CAN x MAR",
         "gols_visitante": "",
-        "mandante": "canada.svg",
-        "visitante": "marrocos.svg"
+        "mandante": "canada.png",
+        "visitante": "marrocos.png"
     },
     {
         "id": 43,
@@ -598,8 +598,8 @@
         "gols_mandante": "",
         "partida": "JAP x ESP",
         "gols_visitante": "",
-        "mandante": "japao.svg",
-        "visitante": "espanha.svg"
+        "mandante": "japao.png",
+        "visitante": "espanha.png"
     },
     {
         "id": 44,
@@ -612,8 +612,8 @@
         "gols_mandante": "",
         "partida": "COS x ALE",
         "gols_visitante": "",
-        "mandante": "costa_rica.svg",
-        "visitante": "alemanha.svg"
+        "mandante": "costa-rica.png",
+        "visitante": "alemanha.png"
     },
     {
         "id": 45,
@@ -626,8 +626,8 @@
         "gols_mandante": "",
         "partida": "COR x POR",
         "gols_visitante": "",
-        "mandante": "coreia_do_sul.svg",
-        "visitante": "portugal.svg"
+        "mandante": "coreia-do-sul.png",
+        "visitante": "portugal.png"
     },
     {
         "id": 46,
@@ -640,8 +640,8 @@
         "gols_mandante": "",
         "partida": "GAN x URU",
         "gols_visitante": "",
-        "mandante": "gana.svg",
-        "visitante": "uruguai.svg"
+        "mandante": "gana.png",
+        "visitante": "uruguai.png"
     },
     {
         "id": 47,
@@ -654,8 +654,8 @@
         "gols_mandante": "",
         "partida": "SER x SUI",
         "gols_visitante": "",
-        "mandante": "servia.svg",
-        "visitante": "suica.svg"
+        "mandante": "servia.png",
+        "visitante": "suica.png"
     },
     {
         "id": 48,
@@ -668,7 +668,7 @@
         "gols_mandante": "",
         "partida": "CAM x BRA",
         "gols_visitante": "",
-        "mandante": "camaroes.svg",
-        "visitante": "brasil.svg"
+        "mandante": "camaroes.png",
+        "visitante": "brasil.png"
     }
 ]
