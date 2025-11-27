@@ -46,7 +46,7 @@ function gerarTabelas(listaGrupos, classificacaoData) {
         
         // --- ALTERAÇÃO 1: O GRID ---
         // Mobile: 1 coluna | Desktop (md): 2 colunas | gap-4 para espaçamento
-        containerPai.classList.add('grupo', 'w-5/6', 'md:w-3/4', 'grid', 'grid-cols-1', 'md:grid-cols-2', 'md:grid-cols-[auto_auto]', 'gap-6', 'mb-8');
+        containerPai.classList.add('grupo', 'w-5/6', 'md:w-3/4', 'grid', 'grid-cols-1', 'md:grid-cols-[3fr_2fr]', 'gap-6', 'mb-8');
         
         containerMain.appendChild(containerPai);
         
