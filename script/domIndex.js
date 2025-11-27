@@ -1,6 +1,16 @@
 const grupos = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 let todosOsJogos = [];
 let todaClassificacao = [];
+let controleRodada = [
+    {grupo: 'A', rodadaAtual: 1},
+    {grupo: 'B', rodadaAtual: 1},
+    {grupo: 'C', rodadaAtual: 1},
+    {grupo: 'D', rodadaAtual: 1},
+    {grupo: 'E', rodadaAtual: 1},
+    {grupo: 'F', rodadaAtual: 1},
+    {grupo: 'G', rodadaAtual: 1},
+    {grupo: 'H', rodadaAtual: 1}
+]
 
 async function carregarDados() {
     try {
@@ -16,8 +26,6 @@ async function carregarDados() {
         // Agora chame sua função principal, passando os dados que ela precisa
         gerarTabelas(grupos, todaClassificacao);
     
-        
-
     } catch (error) {
         console.error("Erro ao carregar dados:", error);
     }
@@ -55,20 +63,23 @@ function gerarTabelas(listaGrupos, classificacaoData) {
         let classificacao = document.createElement('table');
         classificacao.classList.add('h-full', 'w-full');
         
-        sessaoGrupo.classList.add('h-full', 'overflow-x-auto'); 
+        sessaoGrupo.classList.add('h-full', 'overflow-x-auto', 'bg-white', 'shadow-md', 'rounded-lg', 'border', 'border-gray-200'); 
         
         sessaoGrupo.appendChild(classificacao);
         containerPai.appendChild(sessaoGrupo);
 
         let cabecalhoTabela = document.createElement('tr');
         cabecalhoTabela.id = `cabecalho-grupo${element}`;
-        cabecalhoTabela.classList.add('cabecalho');
+        cabecalhoTabela.classList.add('cabecalho', 'bg-gray-100', 'text-gray-600', 'text-xs', 'uppercase', 'leading-normal');
         classificacao.appendChild(cabecalhoTabela);
         parametrosClassificacao.forEach(elementosCabecalho => {
             let colunaCabecalho = document.createElement('th');
             colunaCabecalho.textContent = `${elementosCabecalho}`;
-            // Sugestão: Adicionar padding nas células
-            // colunaCabecalho.classList.add('px-2'); 
+            colunaCabecalho.classList.add('py-3', 'px-2', 'text-center', 'font-bold', 'tracking-wider');
+            if (elementosCabecalho === 'CLASSIFICACAO') {
+                colunaCabecalho.classList.remove('text-center');
+                colunaCabecalho.classList.add('text-left');
+            }
             cabecalhoTabela.appendChild(colunaCabecalho);
         })
         
@@ -90,20 +101,36 @@ function gerarTabelas(listaGrupos, classificacaoData) {
 
 function renderizarLinhasTime(tabelaClassificao, timesGrupo) {
     let tbody = document.createElement('tbody');
+    tbody.classList.add('text-gray-700', 'text-sm'); // Define cor e tamanho base do texto
+
     timesGrupo.forEach((time, index) => {
         const linhaTime = document.createElement('tr');
+
+        // LÓGICA DE DESTAQUE:
+        // Se index < 2 (1º e 2º), aplica fundo verde claro e borda lateral verde
+        if (index < 2) {
+            linhaTime.classList.add('border-b', 'border-gray-200', 'bg-green-50', 'border-l-4', 'border-l-green-500');
+        } else {
+            linhaTime.classList.add('border-b', 'border-gray-200', 'hover:bg-gray-50');
+        }
+
+        // Classes utilitárias para evitar repetição no HTML abaixo
+        const cellPadrao = "py-3 px-2 text-center whitespace-nowrap";
+        const cellTime = "py-3 px-2 text-left font-semibold whitespace-nowrap text-gray-900";
+        const cellPontos = "py-3 px-2 text-center font-bold text-gray-900 bg-gray-50"; 
+
         linhaTime.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${time.time}</td>
-            <td>${time.P}</td>
-            <td>${time.J}</td>
-            <td>${time.V}</td>
-            <td>${time.E}</td>
-            <td>${time.D}</td>
-            <td>${time.GP}</td>
-            <td>${time.GC}</td>
-            <td>${time.SG}</td>
-            <td>${time.per}</td> 
+            <td class="${cellPadrao}">${index + 1}</td>
+            <td class="${cellTime}">${time.time}</td>
+            <td class="${cellPontos}">${time.P}</td>
+            <td class="${cellPadrao}">${time.J}</td>
+            <td class="${cellPadrao}">${time.V}</td>
+            <td class="${cellPadrao}">${time.E}</td>
+            <td class="${cellPadrao}">${time.D}</td>
+            <td class="${cellPadrao}">${time.GP}</td>
+            <td class="${cellPadrao}">${time.GC}</td>
+            <td class="${cellPadrao}">${time.SG}</td>
+            <td class="${cellPadrao}">${time.per}%</td> 
         `;
         tbody.appendChild(linhaTime);
     })
@@ -122,18 +149,22 @@ function gerarJogos(grupo, jogosDoGrupo, elementoPai){
     let btnVoltar = document.createElement('button');
     btnVoltar.textContent = '<';
     btnVoltar.id = `btn-voltar-${grupo}`
-    btnVoltar.classList.add('voltar', 'p-2', 'bg-gray-200', 'rounded', 'cursor-not-allowed'); // Estilo básico
+    btnVoltar.dataset.funcao = 'voltar';
+    btnVoltar.dataset.grupo = `${grupo}`
+    btnVoltar.classList.add('botao', 'p-2', 'bg-gray-200', 'rounded', 'cursor-not-allowed'); // Estilo básico
     cabecalhoJogos.appendChild(btnVoltar);
     
     let textCabecalho = document.createElement('h3');
-    textCabecalho.innerHTML = `<span id=rodada-grupo-${grupo}>1</span>ª Partida`;
+    textCabecalho.innerHTML = `<span id="rodada-grupo-${grupo}">1</span>ª Partida`;
     textCabecalho.classList.add('font-black');
     cabecalhoJogos.appendChild(textCabecalho);
 
     let btnAvancar = document.createElement('button');
-    btnAvancar.textContent = '>'
-    btnAvancar.id = `btn-avancar-${grupo}`
-    btnAvancar.classList.add('avancar','p-2', 'bg-gray-200', 'rounded', 'cursor-pointer'); // Estilo básico
+    btnAvancar.textContent = '>';
+    btnAvancar.id = `btn-avancar-${grupo}`;
+    btnAvancar.dataset.funcao = 'avancar';
+    btnAvancar.dataset.grupo = `${grupo}`
+    btnAvancar.classList.add('botao','p-2', 'bg-gray-200', 'rounded', 'cursor-pointer'); // Estilo básico
     cabecalhoJogos.appendChild(btnAvancar);
 
     for(let i = 0; i < 2; i++){
@@ -195,11 +226,30 @@ function gerarJogos(grupo, jogosDoGrupo, elementoPai){
         containerJogos.appendChild(containerJogo);
         
     }
-
-    
     elementoPai.appendChild(containerJogos);
 }
 
+function criaEventos(){
+    const containerMain = document.querySelector('main');
+    containerMain.addEventListener('click', function(event){
+        if(event.target.matches('.botao')){
+            let funcao = event.target.dataset.funcao;
+            let grupo = event.target.dataset.grupo;
+            controleRodadas(funcao, grupo);
+            console.log(funcao, grupo);
+        }
+    })
+};
 
+function controleRodadas(funcao, grupo){
+    if(funcao == 'voltar'){
+        
+    }
+};
 
-document.addEventListener("DOMContentLoaded", carregarDados);
+function iniciarPagina(){
+    carregarDados();
+    criaEventos();
+}
+
+document.addEventListener("DOMContentLoaded", iniciarPagina);
